@@ -1,0 +1,36 @@
+.main-page{
+  min-height:100vh;
+  background:#f4f7fb;
+  color:#172037;
+}
+
+.main-shell{width:min(1120px,90vw);margin:0 auto}
+.main-hero{min-height:100vh;padding:34px 0 70px}
+.main-nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;background:#fff;border:1px solid #d6e0ef;border-radius:10px;padding:0 18px}
+.main-nav img{width:174px;height:56px;object-fit:contain;object-position:left center}
+.main-nav a{color:#17315f;text-decoration:none;font-weight:900;border:1px solid #d6e0ef;background:#fff;border-radius:8px;padding:11px 16px}
+
+.main-heading{padding:70px 0 42px;max-width:760px}
+.main-heading span{display:inline-block;color:#e8620a;font-size:12px;font-weight:900;text-transform:uppercase;margin-bottom:14px}
+.main-heading h1{color:#17315f;font-size:clamp(38px,6vw,72px);line-height:1;letter-spacing:-.02em;margin-bottom:20px}
+.main-heading p{color:#5f6879;font-size:18px;line-height:1.75;max-width:680px}
+
+.main-options{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.main-card{display:flex;min-height:245px;flex-direction:column;align-items:flex-start;text-decoration:none;background:#fff;border:1px solid #d6e0ef;border-radius:10px;padding:24px;color:#172037;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.main-card:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(23,49,95,.12);border-color:#17315f}
+.main-card span{display:inline-flex;background:#fff2e9;color:#e8620a;border-radius:999px;padding:5px 10px;font-size:11px;font-weight:900;text-transform:uppercase;margin-bottom:22px}
+.main-card h2{color:#17315f;font-size:28px;margin-bottom:12px}
+.main-card p{color:#626c7d;line-height:1.65;margin-bottom:28px}
+.main-card strong{margin-top:auto;color:#e8620a;font-size:14px}
+.main-footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:34px;padding-top:24px;border-top:1px solid #d6e0ef;color:#17315f}
+.main-footer span{color:#626c7d;font-size:13px}
+
+@media(max-width:900px){
+  .main-options{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:620px){
+  .main-nav a{display:none}
+  .main-options{grid-template-columns:1fr}
+  .main-card{min-height:auto}
+}
