@@ -1,4 +1,5 @@
 import { differentials, managementPoints, services } from './content.js';
+import { assetHref, routeHref } from './routes.js';
 import './VariantPage.css';
 
 const variants = {
@@ -74,9 +75,9 @@ function VariantPage({ type }) {
     <main className={`variant-page ${type}`}>
       <nav className="variant-nav">
         <div className="variant-shell variant-nav-inner">
-          <a href={`${variant.path}#home`} className="variant-logo">
+          <a href={routeHref(`${variant.path}#home`)} className="variant-logo">
             <img
-              src="/ems-logo-navbar.jpeg"
+              src={assetHref('ems-logo-navbar.jpeg')}
               alt="EMS Consultoria Comercial e Administrativa - Apoio à Gestão"
             />
           </a>
@@ -86,7 +87,7 @@ function VariantPage({ type }) {
             <a href="#metodo">Método</a>
             <a href="#contato">Contato</a>
           </div>
-          <a href="/main" className="variant-switch">
+          <a href={routeHref('/main')} className="variant-switch">
             Ver estilos
           </a>
         </div>

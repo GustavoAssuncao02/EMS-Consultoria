@@ -1,3 +1,4 @@
+import { assetHref, routeHref } from './routes.js';
 import './MainPage.css';
 
 const siteOptions = [
@@ -64,10 +65,10 @@ function MainPage() {
         <div className="main-shell">
           <nav className="main-nav">
             <img
-              src="/ems-logo-navbar.jpeg"
+              src={assetHref('ems-logo-navbar.jpeg')}
               alt="EMS Consultoria Comercial e Administrativa - Apoio à Gestão"
             />
-            <a href="/estilo-1">Abrir estilo 1</a>
+            <a href={routeHref('/estilo-1')}>Abrir estilo 1</a>
           </nav>
 
           <div className="main-heading">
@@ -81,7 +82,7 @@ function MainPage() {
 
           <div className="main-options">
             {siteOptions.map((option) => (
-              <a className="main-card" href={option.path} key={option.path}>
+              <a className="main-card" href={routeHref(option.path)} key={option.path}>
                 <span>{option.tag}</span>
                 <h2>{option.title}</h2>
                 <p>{option.description}</p>

@@ -4,6 +4,7 @@ import RetroPage from './RetroPage.jsx';
 import SimplePage from './SimplePage.jsx';
 import VariantPage from './VariantPage.jsx';
 import { differentials, managementPoints, services } from './content.js';
+import { assetHref, getCurrentRoute, routeHref } from './routes.js';
 
 function HomePage() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -74,7 +75,7 @@ function HomePage() {
         <div className="nav-inner">
           <a href="#home" className="nav-logo">
             <img
-              src="/ems-logo-navbar.jpeg"
+              src={assetHref('ems-logo-navbar.jpeg')}
               alt="EMS Consultoria Comercial e Administrativa - Apoio à Gestão"
               className="nav-logo-img"
             />
@@ -528,8 +529,20 @@ function HomePage() {
   );
 }
 
+function MainRedirect() {
+  useEffect(() => {
+    window.history.replaceState(null, '', routeHref('/main'));
+  }, []);
+
+  return <MainPage />;
+}
+
 function App() {
-  const normalizedPath = window.location.pathname.replace(/\/+$/, '');
+  const normalizedPath = getCurrentRoute();
+
+  if (normalizedPath === '/') {
+    return <MainRedirect />;
+  }
 
   if (normalizedPath === '/main') {
     return <MainPage />;
@@ -571,7 +584,7 @@ function App() {
     return <VariantPage type="executivo" />;
   }
 
-  return <HomePage />;
+  return <MainRedirect />;
 }
 
 export default App;

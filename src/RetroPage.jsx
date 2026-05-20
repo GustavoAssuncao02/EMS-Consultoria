@@ -1,4 +1,5 @@
 import { differentials, managementPoints, services } from './content.js';
+import { assetHref, routeHref } from './routes.js';
 import './RetroPage.css';
 
 function RetroPage() {
@@ -28,9 +29,9 @@ function RetroPage() {
         </div>
 
         <div className="retro-masthead retro-shell">
-          <a href="/retro#home" className="retro-logo">
+          <a href={routeHref('/retro#home')} className="retro-logo">
             <img
-              src="/ems-logo-navbar.jpeg"
+              src={assetHref('ems-logo-navbar.jpeg')}
               alt="EMS Consultoria Comercial e Administrativa - Apoio à Gestão"
             />
           </a>

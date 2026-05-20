@@ -1,4 +1,5 @@
 import { differentials, managementPoints, services } from './content.js';
+import { assetHref, routeHref } from './routes.js';
 import './SimplePage.css';
 
 function SimplePage() {
@@ -21,9 +22,9 @@ function SimplePage() {
     <main className="simple-page">
       <nav className="simple-nav">
         <div className="simple-shell simple-nav-inner">
-          <a href="/simples#home" className="simple-logo">
+          <a href={routeHref('/simples#home')} className="simple-logo">
             <img
-              src="/ems-logo-navbar.jpeg"
+              src={assetHref('ems-logo-navbar.jpeg')}
               alt="EMS Consultoria Comercial e Administrativa - Apoio à Gestão"
             />
           </a>
