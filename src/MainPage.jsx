@@ -91,10 +91,6 @@ function MainPage() {
             ))}
           </div>
 
-          <footer className="main-footer">
-            <strong>EMS Consultoria</strong>
-            <span>© 2026 EMS Consultoria · Todos os direitos reservados</span>
-          </footer>
         </div>
       </section>
     </main>

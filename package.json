@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "node scripts/create-gh-pages-fallback.mjs",
+    "postbuild": "node scripts/create-gh-pages-fallback.mjs && node scripts/sync-pages-root.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

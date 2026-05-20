@@ -22,9 +22,6 @@
 .main-card h2{color:#17315f;font-size:28px;margin-bottom:12px}
 .main-card p{color:#626c7d;line-height:1.65;margin-bottom:28px}
 .main-card strong{margin-top:auto;color:#e8620a;font-size:14px}
-.main-footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:34px;padding-top:24px;border-top:1px solid #d6e0ef;color:#17315f}
-.main-footer span{color:#626c7d;font-size:13px}
-
 @media(max-width:900px){
   .main-options{grid-template-columns:1fr 1fr}
 }
