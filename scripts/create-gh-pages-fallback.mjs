@@ -4,20 +4,13 @@ import { resolve } from 'node:path';
 const indexPath = resolve('dist', 'index.html');
 const fallbackPath = resolve('dist', '404.html');
 const routes = [
-  'main',
   'estilo-1',
-  'estilo-2',
-  'estilo-3',
-  'estilo-4',
-  'estilo-5',
-  'estilo-6',
-  'estilo-7',
-  'estilo-8',
-  'estilo-9',
-  'simples',
-  'retro',
-  'minimalista',
-  'suave',
+  'transporte-rodoviario',
+  'carga-fracionada',
+  'carga-lotacao',
+  'logistica-integrada',
+  'armazenagem-distribuicao',
+  'seguranca-rastreamento',
 ];
 
 if (!existsSync(indexPath)) {
